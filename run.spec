@@ -21,8 +21,7 @@ include_dirs = ['config']
 
 
 # streamlit 서브모듈 (라이브러리 추가 시 사용)
-hiddenimports = collect_submodules('streamlit')
-# hiddenimports += collect_submodules('oauth2client')
+additional_libs = ['pandas']
 ###############################################
 
 
@@ -50,6 +49,14 @@ datas.append((st_filename, '.'))
 for folder in include_dirs:
     datas.append((folder, folder))
 
+# 리스트에 있는 라이브러리리 반복문으로 추가
+hiddenimports = collect_submodules('streamlit')
+for lib in additional_libs:
+    try:
+        hiddenimports += collect_submodules(lib)
+        print(f"'{lib}' 의 서브모듈이 hiddenimports에 추가되었습니다.")
+    except Exception as e:
+        print(f"'{lib}' 의 서브모듈 수집 실패: {e}")
 
 
 
