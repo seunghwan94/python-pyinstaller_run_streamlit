@@ -21,10 +21,8 @@ console     =  True                  # 콘솔창 표시
 # 포함 할 폴더들 (예: config, utils 등)
 include_dirs = ['config']   
 
-
 # streamlit 서브모듈 (라이브러리 추가 시 사용)
-hiddenimports = collect_submodules('streamlit')
-# hiddenimports += collect_submodules('oauth2client')
+additional_libs = ['pandas']
 ###############################################
 ```
 
