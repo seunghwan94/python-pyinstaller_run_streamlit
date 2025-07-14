@@ -1,3 +1,26 @@
-build
-dist
-venv
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# PyInstaller build artifacts
+build/
+dist/
+
+# Streamlit cache
+.streamlit/
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db

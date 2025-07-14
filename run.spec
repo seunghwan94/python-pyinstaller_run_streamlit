@@ -21,7 +21,8 @@ include_dirs = ['config']
 
 
 # streamlit 서브모듈 (라이브러리 추가 시 사용)
-additional_libs = ['pandas']
+# additional_libs = ['pandas']
+additional_libs = []
 ###############################################
 
 
